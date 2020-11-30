@@ -1,0 +1,14 @@
+
+.container{
+    color:teal;
+    text-align: center;
+}
+#highscore {
+ float: left;
+ color: teal;
+}
+
+#time{ 
+ float: right;
+ color: teal;
+}
