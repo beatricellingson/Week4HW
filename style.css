@@ -1,14 +1,27 @@
 
 .container{
-    color:teal;
+    color:green;
     text-align: center;
 }
 #highscore {
  float: left;
- color: teal;
+ color:green;
 }
 
 #time{ 
  float: right;
- color: teal;
+ color:green;
+}
+
+.start, 
+.Highscores{
+    background-color:green;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+.show {
+    display: block;
 }
