@@ -89,3 +89,14 @@ You are required to submit BOTH of the following for review:
 
 - - -
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+young
+https://github.com/youjmi
+amir
+https://github.com/Alexfit4
+Johnnie
+https://github.com/balokdecoy
+frankie
+https://github.com/Franciscorosado09
+rachel
+https://github.com/rwanke14

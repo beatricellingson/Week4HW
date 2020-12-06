@@ -24,7 +24,7 @@
             <ul class="navbar-nav mr-auto">
                 <button class="Highscores btn btn outline-info">Highscores</button>
             </ul>
-            <a class="navbar-brand my-2 my-lg-0" id="time" value="0" max="60"></a>
+            <div class="navbar-brand my-2 my-lg-0" id="time" value="0" max="60"></div>
         </div>
     </nav>
 
@@ -42,12 +42,19 @@
         <div class="quiz hidden">
             <div class="question"></div>
             <div class="choices">
-                <div class="choice1"></div>
-                <div class="choice2"></div>
-                <div class="choice3"></div>
-                <div class="choice4"></div>
-            </div>
 
+                <!-- <button type="button" class="choice1 btn btn outline-info"></button>
+
+                <button type="button" class="choice2 btn btn outline-info"></button>
+
+                <button type="button" class="choice3 btn btn outline-info"></button>
+
+                <button type="button" class="choice4 btn btn outline-info"></button> -->
+
+            </div>
+        </div>
+
+        <div class="right">
 
         </div>
 
@@ -55,13 +62,11 @@
             <input class="initials" type="text" />
         </div>
 
-        <div class="endScreen hidden">
+        <div class="endPage hidden">
             <div class="score"></div>
-            <button class="tryAgain"></button>
-            <button class="seeHighscores"></button>
+            <button class="tryAgain btn btn outline-info">Try again!</button>
+            <button class="seeHighscores btn btn outline-info">See highscores</button>
         </div>
-
-
 
     </div>
 

@@ -1,17 +1,18 @@
 
-var start = document.querySelector("startingPage")
-var quiz = document.querySelector("quiz")
-var question = document.querySelector("questions")
-var choice1 = document.querySelector("choice1")
-var choice2 = document.querySelector("choice2")
-var choice3 = document.querySelector("choice3")
-var choice4 = document.querySelector("choice4")
-var log = document.querySelector("log")
-var initials = document.querySelector("initials")
-var endScreen = document.querySelector("endScreen")
-var score = document.querySelector("score")
-var tryAgain = document.querySelector("tryAgain")
-var seeHighscores = document.querySelector("seeHighsores")
+// var start = document.querySelector("startingPage")
+// var quiz = document.querySelector("quiz")
+// var question = document.querySelector("questions")
+// var choices = document.querySelector("choices")
+// var choice1 = document.querySelector("choice1")
+// var choice2 = document.querySelector("choice2")
+// var choice3 = document.querySelector("choice3")
+// var choice4 = document.querySelector("choice4")
+// var log = document.querySelector("log")
+// var initials = document.querySelector("initials")
+// var endScreen = document.querySelector("endScreen")
+// var score = document.querySelector("score")
+// var tryAgain = document.querySelector("tryAgain")
+// var seeHighscores = document.querySelector("seeHighsores")
 
 
 var currentIndex = 0;
@@ -71,6 +72,7 @@ var questions = [
 
 ];
 
+
 function startQuiz() {
     console.log("button has been clicked")
 
@@ -79,24 +81,77 @@ function startQuiz() {
 
     //execute the function to show questions
     //example for hardcoded js injection
+
+
+    var button = document.createElement("button")
+    $(".choices").append(button);
+
+    // for (let i = 0; i < questions.choices.length; i++) {
+    //     var element = choices[i];
+
+    //     button.textContent = question.choices[i]
+
+    // }
+
+
+
+
+
     $(".question").text(questions[currentIndex].question);
-    $(".choices").text(questions[currentIndex].choices);
+    $(button).text(questions[currentIndex].choices);
+
+
+
+
+
+
+    // if (choiceClicked === .answer) {
+    //     $(".right").text("Correct!");
+    // }
 
     //start timer function
 }
 
-$(".start").on("click", function () {
-    startQuiz();
+
+
+function endpage() {
+    timeEl.textContent = " ";
+
+    $(".quiz").removeClass("show").addClass("hidden");
+    $(".endPage").removeClass("hidden").addClass("show");
+
+    document.querySelector(".score").textContent = "You got a " + " on the Christmas Quiz"
+}
+
+var timeLeft = 5;
+var timeEl = document.querySelector("#time")
+
+function startTimer() {
+    var timeTnterval = setInterval(function () {
+        timeLeft--;
+        timeEl.textContent = timeLeft;
+
+        if (timeLeft === 0) {
+            clearInterval(timeTnterval);
+            endpage();
+        }
+
+    }, 1000);
+
+}
+
+$(".tryAgain").on("click", function () {
+
+    $(".endPage").removeClass("show").addClass("hidden");
+    $(".startingPage").removeClass("hidden").addClass("show");
+    window.location.reload();
+
 })
 
-// var timeLeft = 60;
-// var downloadTimer = setInterval(function () {
-//     timeLeft--;
-//     document.querySelector(".timer").textContent = timeLeft;
-//     if (timeleft <= 0) {
-//        pop up end page
-//     }
-// }, 1000);
+$(".start").on("click", function () {
+    startQuiz();
+    startTimer();
+})
 
 
 // function myFunction(event) {
